@@ -1,0 +1,51 @@
+[project]
+name = "advent_of_code_2024"
+requires-python = "~=3.11"
+
+[tool.mypy]
+python_version = "3.11"
+ignore_missing_imports = true
+disallow_untyped_defs = true
+warn_unused_ignores = true
+warn_redundant_casts = true
+
+
+[tool.ruff]
+line-length = 88
+indent-width = 4
+show-fixes = true
+target-version = "py311"
+exclude = ["notebooks/*.ipynb"]
+
+[tool.ruff.format]
+docstring-code-format = true
+
+[tool.ruff.lint]
+# Enable the pycodestyle (`E`) and Pyflakes (`F`) rules by default.
+# "I": isort
+# "UP": pyupgrade
+# "YTT" flake-2020
+# "C4": flake8-comprehensions
+# "PIE": flake8-pie
+# "SIM" flake8-simplify
+# "INT" flake8-gettext
+# "RUF100" remove useless "noqa"
+# "NPY" numpy specific rules, useful to prepare update to numpy 2.0
+# "PD" pandas-vet
+select = [
+    "E",
+    "F",
+    "I",
+    "UP",
+    "YTT",
+    "C4",
+    "PIE",
+    "SIM",
+    "INT",
+    "RUF100",
+    "NPY",
+    "PD",
+]
+ignore = [
+    "PD901", # allow variables named df because we have too much of them already
+]
