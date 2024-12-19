@@ -46,10 +46,6 @@ def solve_both_parts(towels: set[str], designs: list[str]) -> tuple[int, int]:
     return res_part_1, res_part_2
 
 
-def solve_part_2() -> int:
-    return 0
-
-
 if __name__ == "__main__":
     with open("./inputs/day19/input.txt") as f:
         lines = f.readlines()
